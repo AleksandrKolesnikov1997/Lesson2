@@ -1,0 +1,5 @@
+edd_str = str(input('Введите несколько слов, разделяя их с помощью пробела: '))
+list = edd_str.split()
+print(list)
+for num, value in enumerate(list, 1):
+    print(str(num) + '-ое значение равно: ' + str(value[:10]))
