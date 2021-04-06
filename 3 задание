@@ -1,0 +1,45 @@
+# Пользователь вводит месяц в виде целого числа от 1 до 12.
+# Сообщить к какому времени года относится месяц (зима, весна, лето, осень).
+# Напишите решения через list и через dict.
+print('Метод через "dict"')
+seasons = {'зима': (1, 2, 12),
+           'весна': (3, 4, 5),
+           'лето': (6, 7, 8),
+           'осень': (9, 10, 11)}
+
+month_dict = int(input('Выберите номер месяца: '))
+for key in seasons.keys():
+    if month_dict in seasons[key]:
+        print(month_dict, '- это', key)
+if month_dict == 0 or month_dict > 12:
+    print(month_dict, '- нет такого месяца!')
+    
+print('----'*9)
+
+print('Метод через "list"')
+lst = [
+    'Нет такого месяца',
+    'Январь',
+    'Февраль',
+    'Март',
+    'Апрель',
+    'Май',
+    'Июнь',
+    'Июль',
+    'Август',
+    'Сентябрь',
+    'Октябрь',
+    'Ноябрь',
+    'Декабрь']
+print('Список месяцев: ', lst[1:13])
+month_list = int(input('Введите номер месяца: '))
+if month_list == 12 or month_list == 1 or month_list == 2:
+    print(month_list, '- это зима')
+elif month_list == 3 or month_list == 4 or month_list == 5:
+    print(month_list, '- это весна')
+elif month_list == 6 or month_list == 7 or month_list == 8:
+    print(month_list, '- это лето')
+elif month_list == 9 or month_list == 10 or month_list == 11:
+    print(month_list, '- это осень')
+elif month_list == 0 or month_list > 12:
+    print(month_list, '- нет такого месяца!')
